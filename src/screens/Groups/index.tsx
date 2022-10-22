@@ -6,7 +6,8 @@ import { Header } from "@components/Header";
 import { Highlight } from "@components/Highlight";
 import { ListEmpty } from "@components/ListEmpty";
 
-import { Container, Title } from "./styles";
+import { Container } from "./styles";
+import { Button } from "@components/Button";
 
 export function Groups() {
   const [groups, setGroups] = useState<string[]>(["Galera rocket"]);
@@ -24,7 +25,10 @@ export function Groups() {
         ListEmptyComponent={() => (
           <ListEmpty message="Que tal cadastrar a primeira turma?" />
         )}
+        showsVerticalScrollIndicator={false}
       />
+
+      <Button title="Criar nova turma" />
     </Container>
   );
 }
